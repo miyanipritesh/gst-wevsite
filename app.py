@@ -995,9 +995,9 @@ with t_export:
                     pd.DataFrame(st_b2b).to_excel(st_wr, sheet_name='B2B Invoices', index=False)
             master_z.writestr(f"{folder_prefix}{APP_NAME}_Audit_Report_{period_label}_{g_num}.xlsx", st_buf.getvalue())
 
-    st.download_button(
+st.download_button(
         f"📦 Download 1-Click All-States Master ZIP Bundle ({period_label})",
-        data=master_zip_buf.getvalue>,
+        data=master_zip_buf.getvalue(),
         file_name=master_zip_filename,
         mime="application/zip",
         use_container_width=True
